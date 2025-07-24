@@ -1,0 +1,1 @@
+{"version":"1.0","name":"API RESTful","isWebProject":false,"config":{"version":"1.0","initialCommand":null,"runConfigurations":[{"name":"Default","isDefault":true,"command":"npm run dev"}]}}
