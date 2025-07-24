@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const User = require('../models/users');
+const { registerUser } = require('../controllers/authController');
 
-// Rota de registro de usuario
-router.post('/register', async (req, res) => {
-   const { name, email, password } = req.body;
-});
+// Rota de registro de usuário
+router.post('/register', registerUser);
 
+module.exports = router;

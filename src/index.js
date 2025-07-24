@@ -2,8 +2,9 @@ const express = require("express");
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-dotenv.config();
+const authRoutes = require('./routes/auth');
 
+dotenv.config();
 const MONGO_URI = process.env.MONGO_URI;
 console.log('URI:', MONGO_URI);
 
@@ -11,6 +12,8 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
+
+app.use('/api', authRoutes);
 
 // Conexão com o MongoDB
 mongoose.connect(MONGO_URI, {

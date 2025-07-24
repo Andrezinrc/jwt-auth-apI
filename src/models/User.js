@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
   - password: string, obrigatório
   - timestamps: cria campos automáticos createdAt e updatedAt
 */
-const userSchena = new mongoose.Schema({
+
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -25,3 +26,5 @@ const userSchena = new mongoose.Schema({
         required: true
     }
 }, { timestamps: true });
+
+module.exports = mongoose.model('User', userSchema);
